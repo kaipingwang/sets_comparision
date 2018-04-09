@@ -1,0 +1,21 @@
+Name     Method                   Features               Comments                              Example
+vector   index and push_back   1. dynamical allocation   produce a new array to copy old one   vector<vector<int>>grid(3, vector<int>(4))
+                               2. save the space for memory
+                               3. not well support insertion 
+                                  and delete 
+                               4. only push and pop in the end of vector
+                                  (not sure)
+                               
+List     no index, but push_back  1. no internal memory
+                                  2. non-continuous memory
+                                  3. easy to insert and delete
+                                  4. enable to push and pop in the start and 
+                                     end of vector
+                                  5. more space consumption
+                                  6. no random vist
+                                  
+Map      <key, value> and no index  1. efficient to search             has iterator 
+         insert, make_pair          2. no-upfront memory
+         
+Set      Sorted and unique value    1. no repeat value insertion       has iterator
+
