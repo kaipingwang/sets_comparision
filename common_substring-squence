@@ -36,5 +36,5 @@ int getCommonStrLength(string s1, string s2 )
         
         }     
      }
-   return max; // 最長公字串 可以 return str1.substr(j-max, j) 求得substring 的內容
+   return max; // 最長公字串 可以 return str2.substr(j-max, j) 求得substring 的內容
 }
