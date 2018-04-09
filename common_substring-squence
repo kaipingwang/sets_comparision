@@ -1,0 +1,40 @@
+****************** use dynamic programming ***************
+substring       => must be continuous 
+string sequence => common charaters which do not have to be continuous
+
+int getCommonStrLength(string s1, string s2 )
+{
+ int len1 = s1.length();
+ int len2 = s2.length();
+ int pos;
+ 
+ char **arr = new char*[len1];
+ 
+ for(int i =0; i < len1; i++)
+     arr[i][0] =0;
+    
+ for(int j =0; j < len2; j++)
+     arr[0][j] =0;
+ 
+ int max = 0;
+     for(int i =0; i< len1; i++)
+     {
+        for(int j=0; j< len2; j++)
+        {
+          if(s1[i] == s2[j]){
+            arr[i][j] = arr[i-1][j-1]+1; // 相同長度加1
+            maxLen = max(maxlen, arr[i][j]);
+            pos = j;                    //記住最長string 的length;
+          }else{
+            arr[i][j]=0; // 最長公字串因為不連續長度重新計算
+            /*
+             如果是longest common string swquence 
+             arr[i][j] = max(a[i-1][j],a[i][j-1]);
+            */
+          }
+        
+        
+        }     
+     }
+   return max; // 最長公字串 可以 return str1.substr(j-max, j) 求得substring 的內容
+}
